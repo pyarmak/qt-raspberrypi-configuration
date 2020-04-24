@@ -9,7 +9,7 @@ QTWEBENGINE=0
 QTSCRIPT=0
 MAPBOXGL=0
 
-PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig
+PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/local/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig
 export PKG_CONFIG_LIBDIR
 
 QT_CONFIG_COMMON:=-v -optimized-tools \
@@ -21,18 +21,22 @@ QT_CONFIG_COMMON:=-v -optimized-tools \
 	-nomake examples -no-compile-examples \
 	-skip qtwayland \
 	-skip qtwebengine \
+	-skip qtlocation \
 	-skip qtscript \
+	-skip qtmacextras \
+	-skip qtwinextras \
+	-skip qtactiveqt \
 	-no-pch \
 	-no-gtk \
 	-no-xcb \
-	-no-feature-geoservices_mapboxgl \
+	-no-xcb-xlib \
 	-qt-pcre \
 	-ssl \
 	-evdev \
 	-system-freetype \
 	-fontconfig \
 	-glib \
-	-sctp \
+	-gstreamer \
 	-recheck-all \
 	-qpa eglfs
 
