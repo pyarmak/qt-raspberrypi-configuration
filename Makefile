@@ -36,7 +36,6 @@ QT_CONFIG_COMMON:=-v -optimized-tools \
 	-system-freetype \
 	-fontconfig \
 	-glib \
-	-gstreamer \
 	-recheck-all \
 	-qpa eglfs
 
